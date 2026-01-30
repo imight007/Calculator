@@ -1,0 +1,29 @@
+# Function to perform calculation
+def calculator():
+    print("Select Operation: +, -, *, /")
+    operator = input("Enter operator: ")
+    
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        
+        if operator == "+":
+            print(f"Result: {num1 + num2}")
+        elif operator == "-":
+            print(f"Result: {num1 - num2}")
+        elif operator == "*":
+            print(f"Result: {num1 * num2}")
+        elif operator == "/":
+            # Check for division by zero
+            if num2 == 0:
+                print("Error: Division by zero")
+            else:
+                print(f"Result: {num1 / num2}")
+        else:
+            print("Invalid Operator")
+            
+    except ValueError:
+        print("Invalid Input: Please enter numerical values")
+
+# Run the calculator
+calculator()
